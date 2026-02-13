@@ -109,25 +109,27 @@ st.markdown("""
 
 @st.cache_resource
 def load_models():
-    """Load trained models and pipeline."""
     models_path = Path(__file__).parent / "models"
 
     try:
+        # If models folder missing → train models automatically
+        if not models_path.exists():
+            import subprocess
+            subprocess.run(["python", "src/train.py"])
+
         pipeline = CKDDataPipeline()
         pipeline.load_pipeline(str(models_path))
+
         classifier = joblib.load(str(models_path / "best_classifier.pkl"))
+        regressor = joblib.load(str(models_path / "best_regressor.pkl"))
         model_info = joblib.load(str(models_path / "model_info.pkl"))
 
-        regressor = None
-        if model_info.get("has_regression", False):
-            reg_path = models_path / "best_regressor.pkl"
-            if reg_path.exists():
-                regressor = joblib.load(str(reg_path))
-
         return pipeline, classifier, regressor, model_info
+
     except Exception as e:
-        st.error(f"Error loading models: {e}")
+        st.warning("Models not found. Running in demo mode.")
         return None, None, None, None
+
 
 
 def create_gauge_chart(value, title, max_value=100):
