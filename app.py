@@ -115,7 +115,9 @@ def load_models():
         # If models folder missing → train models automatically
         if not models_path.exists():
             import subprocess
-            subprocess.run(["python", "src/train.py"])
+            import sys
+        subprocess.run([sys.executable, "src/train.py"])
+
 
         pipeline = CKDDataPipeline()
         pipeline.load_pipeline(str(models_path))
