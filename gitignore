@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+*.pkl
+
+# Virtual environment
+venv/
+.env/
+
+# Model files
+models/*.pkl
+
+# Data
+data/*.csv
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
