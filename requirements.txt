@@ -1,26 +1,19 @@
-# ==============================
-# CKD Prediction System - Production Requirements
-# Optimized for Streamlit Cloud Deployment
-# ==============================
+numpy==1.26.4
+pandas==2.2.2
+scipy==1.11.4
 
-# Core Libraries
-numpy
-pandas
-scipy
+scikit-learn==1.4.2
+xgboost==2.0.3
+imbalanced-learn==0.12.2
 
-# Machine Learning
-scikit-learn
-xgboost
-imbalanced-learn
-joblib
+tensorflow==2.15.0
 
-# Visualization
-matplotlib
-seaborn
-plotly
+matplotlib==3.8.4
+seaborn==0.13.2
+plotly==5.22.0
 
-# Web App
-streamlit
+streamlit==1.32.2
+altair==4.2.2
 
-# File Support
-openpyxl
+joblib==1.4.2
+openpyxl==3.1.2
