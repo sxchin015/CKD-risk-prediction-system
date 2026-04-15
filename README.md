@@ -41,7 +41,7 @@ This system uses machine learning to:
 - Random Forest Classifier
 - XGBoost Classifier
 - Gradient Boosting Classifier
-- Neural Network (MLPClassifier)
+
 
 **Regression Models (Kidney Function Score):**
 - Linear Regression
@@ -49,7 +49,7 @@ This system uses machine learning to:
 - Random Forest Regressor
 - Gradient Boosting Regressor
 - XGBoost Regressor
-- Neural Network (MLPRegressor)
+
 
 ### 📊 Data Pipeline
 - Automated data loading and validation
