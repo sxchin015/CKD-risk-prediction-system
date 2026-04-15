@@ -5,7 +5,7 @@
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-1.3+-orange.svg)](https://scikit-learn.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-A comprehensive, production-ready AI/ML system for predicting Chronic Kidney Disease risk and kidney function scores using advanced machine learning and neural network models.
+A comprehensive, production-ready AI/ML system for predicting Chronic Kidney Disease risk and kidney function scores using advanced machine learning.
 
 ![CKD Prediction System](https://img.icons8.com/color/96/000000/kidney.png)
 
